@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector ,useDispatch} from 'react-redux';
-import { delCart } from '../redux/action';
+
+import { itemQuantityIncrease,itemQuantityDecrease,delFromCart } from '../redux/action/ActionCreator';
 const Cart = () => {
-  const products=useSelector((state)=>state.handleCart);
+  const products=useSelector((state)=>state.cart);
   const dispatch=useDispatch();
  
 
@@ -28,7 +29,12 @@ const Cart = () => {
               <div>
                 <h3>total</h3>
                 <p>{totalPrice()}</p>
-                <div onClick={()=>dispatch(delCart((product)))}>
+                <div>
+                  <div onClick={()=>dispatch(itemQuantityDecrease((product)))}>-</div>
+                  {product.quantity}
+                  <div onClick={()=>dispatch(itemQuantityIncrease((product)))}>+</div>
+                </div>
+                <div onClick={()=>dispatch(delFromCart((product)))}>
                 <ion-icon name="trash-outline"></ion-icon>
                 </div>
               

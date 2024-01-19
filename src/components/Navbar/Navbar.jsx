@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 
 
 const Navbar = () => {
-  const state=useSelector((state)=>state.handleCart);
+  const cart=useSelector((state)=>state.cart);
   const navigate = useNavigate(); 
   const [categories,setCategories]=useState([]);
   // const [allProducts,SetAllProducts]=useState([])
@@ -54,13 +54,14 @@ const Navbar = () => {
         <ion-icon name="person"id='icons'></ion-icon>
         </div>
         <div>
+        <Link to='/products/wishlist' id='cart-anchor' >
         <ion-icon name="heart"id='icons'></ion-icon>
+        </Link>
         </div>
         <div className='cart-span' >
           <Link to='/products/cart' id='cart-anchor' ><ion-icon name="bag" id='icons'></ion-icon></Link>
        
-        
-        <span>{state.length}</span>
+        <span>{cart.length}</span>
         </div>
       </div>
      
