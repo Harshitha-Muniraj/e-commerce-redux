@@ -1,0 +1,90 @@
+.singlepage{
+    width: 70%;
+    margin: 0 auto ;
+    height: 90vh;
+    display: flex;
+    gap: 4rem;
+
+    figure{
+        flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+    img{
+        width: 20rem;
+    }
+    }
+}
+
+
+
+
+
+.sp-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sp-price{
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.inc-dec{
+    display: flex;
+}
+
+
+
+.quantity-btn{
+    width: 30px;
+    height: 26px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: navajowhite;
+    background-color: #e7e5df;
+}
+
+
+.add-cart-btn{
+    border: none;
+    padding: 7px 10px;
+    background-color: blue;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    color: white;
+    border-radius: 4px;
+    /* width: 8rem; */
+    /* height: 2rem; */
+    align-items: center;
+
+    p{
+        font-family: 'Urbanist';
+        letter-spacing: 1px;
+    }
+}
+#sp-cart{
+    font-size: 1.1rem;
+}
+.rating{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+
+    p{
+        font-size: 1.1rem;
+    font-weight: 500;
+    }
+}
+#star{
+    color: #FFC107;
+}

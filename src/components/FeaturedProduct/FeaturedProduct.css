@@ -1,0 +1,38 @@
+
+.featured-products{
+    width: 65%;
+    margin: 1% auto;
+  
+}
+.fp-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+.fp-container .item{
+    flex: 1;
+    height: 60vh;
+   
+}
+.featured-products figure{
+    overflow: hidden;
+}
+.fp-container img{
+     object-fit: cover;
+     width: 100%;
+     height: 45vh;
+   
+    
+}
+.fp-container img:hover{
+   
+   transform: scale(1.3);
+}
+.fp-details{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 20px;
+}

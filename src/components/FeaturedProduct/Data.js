@@ -1,0 +1,31 @@
+const Data=[
+    {
+        id:1,
+        img:'https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg',
+        originalPrice:20,
+        offerPrice:18,
+        title:'Pant'
+    },
+    {
+        id:2,
+        img:'https://images.pexels.com/photos/8217366/pexels-photo-8217366.jpeg?auto=compress&cs=tinysrgb&w=600',
+        originalPrice:20,
+        offerPrice:18,
+        title:'Pant'
+    },
+    {
+        id:3,
+        img:'https://images.pexels.com/photos/6311251/pexels-photo-6311251.jpeg?auto=compress&cs=tinysrgb&w=600',
+        originalPrice:20,
+        offerPrice:18,
+        title:'Pant'
+    },
+    {
+        id:4,
+        img:'https://images.pexels.com/photos/13282702/pexels-photo-13282702.jpeg?auto=compress&cs=tinysrgb&w=600',
+        originalPrice:20,
+        offerPrice:18,
+        title:'Pant'
+    },
+]
+export default Data

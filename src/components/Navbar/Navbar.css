@@ -1,0 +1,79 @@
+header{
+    background-color: darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    z-index: 999;
+}
+.nav-left{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex: 1;
+}
+label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+select{
+    font-size: 1.2rem;
+    font-weight: 500;
+  
+    border: none;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 5px;
+    
+    width: 9rem;
+    
+    text-transform: capitalize;
+    font-family: urbanist;
+ 
+    letter-spacing: 2px;
+}
+select:focus{
+    outline: none;
+}
+.center{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.nav-right{
+    display: flex;
+    /* gap: 99px; */
+    flex: 1;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    gap: 20px;
+}
+#icons{
+    font-size: 1.4rem;
+}
+.nav-right span{
+    position: absolute;
+    top: 0;
+    background-color: black;
+    width: 1.2rem;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    /* left: 15px; */
+    right: -9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-span{
+    position:relative
+
+    
+}
+header a{
+    color: white;
+}

@@ -1,0 +1,48 @@
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 75%;
+    margin: 4% auto;
+    gap: 104px;
+}
+.product-card{
+    width: 100%;
+    height: 57vh;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border: 2px solid gainsboro;
+
+    figure{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    img{
+        object-fit: contain;
+    width: 100%;
+    height: 30vh;
+    }
+    button{
+        border: none;
+        background-color: blue;
+        padding: 6px;
+        border-radius: 3px;
+        color: white;
+    }
+    
+}
+.card-price{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding: 0 1rem;
+    text-align: center;
+    gap: 10px;
+    height: 10vh;
+ 
+}
