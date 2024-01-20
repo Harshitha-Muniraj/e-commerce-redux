@@ -47,7 +47,7 @@ const Navbar = () => {
         </select>
       </div>
       <div className="center">
-        <Link><h1>HM Store</h1></Link>
+        <Link to='/'><h1>HM Store</h1></Link>
       </div>
       <div className="nav-right">
         <div>

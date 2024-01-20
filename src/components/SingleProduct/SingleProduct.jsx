@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import './SingleProduct.css'
 import { useParams } from 'react-router-dom';
 import {useDispatch, useSelector } from 'react-redux';
@@ -13,12 +13,13 @@ const SingleProduct = () => {
     let {id}=useParams();
   const [product,SetProduct]=useState([]);
   const [loading,SetLoading]=useState(false);
-  const [check,setCheck]=useState('')
+  // const [check,setCheck]=useState('')
   const  dispatch=useDispatch();
   product.quantity=qty;
+  let navigate=useNavigate()
   // const wishList=useSelector(state=>state.wishList)
   
-      console.log("kk",check) 
+      // console.log("kk",check) 
     console.log("wis",wishList)
     async function getProduct(){
        SetLoading(true)
@@ -36,7 +37,9 @@ const SingleProduct = () => {
    
   return (
     <div>
-     
+      <button onClick={() => navigate(-1)} className='goback'>
+      <ion-icon name="arrow-back"></ion-icon>
+      </button>
       {loading ? <h3 style={{height:'80vh',display:'flex',alignItems:'center',justifyContent:'center'}} >loading...</h3> : 
    
     
@@ -60,7 +63,7 @@ const SingleProduct = () => {
           </button>
           <button className='add-cart-btn'>
           <ion-icon name="heart-outline" id='sp-cart'></ion-icon>
-          {wishList==[] || wishList.filter(item=>item.id==product.id)?
+          {wishList==[] || wishList.find(item=>item.id==product.id)?
           <p onClick={()=>dispatch(removeFromWishlist(product))}>Remove From WhishList</p>:
           <p onClick={()=>dispatch(addToWishlist(product))}>ADD TO WhishList</p>
         }

@@ -8,8 +8,9 @@ const WishList = () => {
     let navigate=useNavigate()
   return (
     <>
-     <button onClick={() => navigate(-1)}>Go back</button>
-    
+    <button onClick={() => navigate(-1)} className='goback'>
+      <ion-icon name="arrow-back"></ion-icon>
+      </button>
     <div className='product-grid'>
          
         {

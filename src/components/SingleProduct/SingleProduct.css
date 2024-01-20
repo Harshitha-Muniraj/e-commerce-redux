@@ -51,6 +51,7 @@
     justify-content: center;
     border: navajowhite;
     background-color: #e7e5df;
+    cursor: pointer;
 }
 
 
@@ -62,6 +63,7 @@
     text-align: center;
     gap: 10px;
     color: white;
+    cursor: pointer;
     border-radius: 4px;
     /* width: 8rem; */
     /* height: 2rem; */

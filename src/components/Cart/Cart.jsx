@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css'
 import { useSelector ,useDispatch} from 'react-redux';
 
 import { itemQuantityIncrease,itemQuantityDecrease,delFromCart } from '../redux/action/ActionCreator';
@@ -13,36 +14,49 @@ const Cart = () => {
     return total
   }
   return (
-    <div>
+    <div className='cart'>
        <h3>Products in your cart</h3>
-       
+       {products.length>=1?
+       <div className='cart-container'>
        {
         products.map((product)=>{
           
           return (
-            <div key={product.id}>
-              <img src={product.image} alt="" />
-              <div>
+            <div key={product.id} className='cart-card'>
+              <img src={product.image} alt="" className='cartProductImg' />
+              <div className='cart-product-name'>
                 <p>{product.title}</p>
-                <p>{product.quantity}x{product.price}={product.quantity*product.price}</p>
+                
               </div>
-              <div>
-                <h3>total</h3>
-                <p>{totalPrice()}</p>
-                <div>
-                  <div onClick={()=>dispatch(itemQuantityDecrease((product)))}>-</div>
-                  {product.quantity}
-                  <div onClick={()=>dispatch(itemQuantityIncrease((product)))}>+</div>
+              <div className='inc-dec flex'>
+                  <button onClick={()=>dispatch(itemQuantityDecrease((product)))}>-</button>
+                  <p>{product.quantity}</p>
+                  <button onClick={()=>dispatch(itemQuantityIncrease((product)))}>+</button>
                 </div>
-                <div onClick={()=>dispatch(delFromCart((product)))}>
+                <div className='flex'>
+                <h3>Price</h3>
+                <p>{product.quantity}x{product.price}={product.quantity*product.price}</p>
+                </div>
+                
+                <div onClick={()=>dispatch(delFromCart((product)))} className='flex'>
                 <ion-icon name="trash-outline"></ion-icon>
                 </div>
               
-              </div>
+              
             </div>
           )
         })
        } 
+       
+       <div  className='total'>
+                <h3>total</h3>
+                <p>{totalPrice()}</p>
+      </div>
+               
+      </div>
+       :<p>Cart Is Empty</p>}
+       
+       
     </div>
   )
 }

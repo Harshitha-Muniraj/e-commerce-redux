@@ -1,9 +1,9 @@
 import { ADD_TO_CART,DELETE_FROM_CART,ITEM_QUANTITY_DECREASE,REMOVE_FROM_WISHLIST,ITEM_QUANTITY_INCREASE,ADD_TO_WISHLIST } from "./ActionTypes"
 
-export const delFromCart=()=>{
+export const delFromCart=(item)=>{
     return{
         type:DELETE_FROM_CART,
-
+       payload:item
     }
 }
 export const removeFromWishlist=(item)=>{

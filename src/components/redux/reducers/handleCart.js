@@ -24,7 +24,8 @@ const handleCart=(state=initialState,action)=>{
     }
     else if(action.type==="DELETE_FROM_CART"){
   
-         return {...state,cart:[]}
+         return {...state,cart:[...state.cart.filter((x)=>
+            x.id!==product.id)]}
     }
     
        else if(action.type==='ITEM_QUANTITY_DECREASE'){

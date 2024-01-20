@@ -23,7 +23,7 @@ const ProductList = ({products}) => {
                             <div>{title}</div>
                             
                         </div>
-                        <Link to={`/product/${id}`} ><button >Buy Now</button></Link>
+                        <Link to={`/product/${id}`} ><button>Buy Now</button></Link>
                     </div>
                 )
             })
